@@ -3,6 +3,7 @@ site:
 
 serve: site
 	if python3 -c 'import http.server' 2> /dev/null; then \
+		cd _site; \
 	    echo Running Python3 http.server ...; \
 	    python3 -m http.server; \
 	elif python -c 'import http.server' 2> /dev/null; then \
